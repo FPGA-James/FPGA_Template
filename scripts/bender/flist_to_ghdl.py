@@ -83,7 +83,8 @@ def parse_flist_to_ghdl(flist_path: str, ghdl_flist_path: str) -> None:
                 # This is a file entry
                 file_path = stripped_line[1:].strip()
                 if current_tag:
-                    outfile.write(f'ghdl -a --std=08 --work={current_tag} --workdir=build/{current_tag} /{file_path}\n')
+                    # TODO Add may to auto map libs
+                    outfile.write(f'ghdl -a --std=08 --work={current_tag} --workdir=build  -Pbuild /{file_path}\n')
     
 if __name__ == "__main__":
     if len(sys.argv) != 3:
