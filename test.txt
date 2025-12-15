@@ -1,0 +1,27 @@
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/tags [rggen_rtl]
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_rtl.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_or_reducer.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_mux.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_bit_field.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_bit_field_w01trg.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_address_decoder.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_register_common.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_default_register.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_indirect_register.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_external_register.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_adapter_common.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_apb_adapter.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_apb_bridge.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_axi4lite_skid_buffer.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_axi4lite_adapter.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_axi4lite_bridge.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_avalon_adapter.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_avalon_bridge.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_wishbone_adapter.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_wishbone_bridge.vhd
+/Users/james/Workspace/fpga_template/deps/ghdl-rggen-vhdl-rtl/rggen_native_adapter.vhd
+/Users/james/Workspace/fpga_template/tags [axi_dev]
+/Users/james/Workspace/fpga_template/out/axi_test_reg.vhd
+/Users/james/Workspace/fpga_template/src/axi_dev_core.vhd
+/Users/james/Workspace/fpga_template/src/axi_dev_topvhd
+

@@ -1,0 +1,7 @@
+packages:
+  ghdl-rggen-vhdl-rtl:
+    revision: null
+    version: null
+    source:
+      Path: deps/ghdl-rggen-vhdl-rtl
+    dependencies: []

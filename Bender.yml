@@ -1,0 +1,47 @@
+# Package metadata. Required.
+package:
+  # The name of the package. Required.
+  name: axi_dev_top
+
+  # The list of package authors and contributors. Optional.
+  # By convention, authors should be listed in the form shown below.
+  authors: ["James Fleeting <email>"]
+
+dependencies:
+  # Git revision dependency. 
+  ghdl-rggen-vhdl-rtl: { git: "https://github.com/FPGA-James/ghdl_rggen-vhdl-rtl.git", rev: master }
+
+# Freeze any dependency updates. Optional. False if omitted.
+# Useful for chip packages. Once the chip is in final tapeout mode, and
+# dependency updates would require disastrous amounts of re-verification.
+frozen: false
+
+# List of source files in this package. Optional.
+sources:
+  #- target: rtl
+  # set the lst here
+  - files:
+    - tags [axi_dev]
+    - out/axi_test_reg.vhd
+    - src/axi_dev_core.vhd
+    - src/axi_dev_topvhd
+
+# Additional workspace configuration. Optional.
+workspace:
+  # Create symlinks to dependencies.
+  # A list of paths at which bender will create a symlink to the checked-out
+  # version of the corresponding package.
+  #package_links:
+    #rggen: ghdl-rggen-vhdl-rtl
+
+  # A directory where the dependencies will be checked out. Optional.
+  # If specified, bender will check out the dependencies once and leave them
+  # for the user to modify and keep up to date.
+  # CAUTION: Bender will not touch these after the initial checkout.
+  # Useful for chip packages, if the intent is to commit all dependencies into
+  # the chip's version control.
+  checkout_dir: deps
+
+
+
+
