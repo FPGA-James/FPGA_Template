@@ -60,6 +60,7 @@ wave: sim
 ## generare registers 
 reg_gen: ## generare registers
 	rggen --plugin rggen-vhdl -c regs/config.yml --output out regs/reg_map.yml
+	$(PYTHON) scripts/rggen/lib_update.py
 
 doc_gen: ## Generate documentation for the RTL design
 	@echo "Moving to Dec scriptomg folder..."

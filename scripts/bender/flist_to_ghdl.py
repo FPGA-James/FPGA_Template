@@ -59,6 +59,36 @@ def get_library_name_from_tag(flist_path: str, ghdl_flist_path: str) -> str:
                 outfile.write(f'mkdir -p build/{library_name}\n')
 
 
+def parse_flist_for_libs(flist_path: str) -> dict:
+    """
+    Parse the flist file to extract library names from tags.
+
+    Parameters
+    ----------
+    flist_path : str
+        Path to the input flist file.
+
+    Returns
+    -------
+    dict
+        A dictionary mapping tags to library names.
+    """
+    libs = {}
+    with open(flist_path, 'r', encoding='utf-8') as infile:
+        for line in infile:
+            stripped_line = line.strip()
+            if stripped_line.endswith(']') and 'tags [' in stripped_line:
+                # Extract the tag
+                tag = stripped_line.split('[')[1].split(']')[0].strip()
+                libs[tag] = tag  # Here we simply map tag to itself; modify as needed
+    return libs
+
+
+def build_ghdl_library_path(libs: dict) -> str:
+    lib_result = " -P".join([f"build/{lib}" for lib in libs.values()])
+    return lib_result
+
+
 def parse_flist_to_ghdl(flist_path: str, ghdl_flist_path: str) -> None:
     """
     Convert a Bender flist file to a GHDL-compatible format.
@@ -71,6 +101,7 @@ def parse_flist_to_ghdl(flist_path: str, ghdl_flist_path: str) -> None:
         Path to the output GHDL-compatible flist file.
     """
     with open(flist_path, 'r', encoding='utf-8') as infile, open(ghdl_flist_path, 'a', encoding='utf-8') as outfile:
+        lib_result = build_ghdl_library_path(parse_flist_for_libs(flist_path))
         current_tag = None
         for line in infile:
             stripped_line = line.strip()
@@ -84,8 +115,9 @@ def parse_flist_to_ghdl(flist_path: str, ghdl_flist_path: str) -> None:
                 file_path = stripped_line[1:].strip()
                 if current_tag:
                     # TODO Add may to auto map libs
-                    outfile.write(f'ghdl -a --std=08 --work={current_tag} --workdir=build  -Pbuild /{file_path}\n')
-    
+                    outfile.write(f'ghdl -a --std=08 --work={current_tag} --workdir=build/{current_tag} -P{lib_result} /{file_path}\n')
+
+
 if __name__ == "__main__":
     if len(sys.argv) != 3:
         print("Usage: python flist_to_ghdl.py <input_flist> <output_ghdl_flist>")
