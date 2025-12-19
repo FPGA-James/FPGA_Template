@@ -1,3 +1,22 @@
+-- ============================================================================
+--  Project        : FPGA_Template
+--  File           : <FILENAME>
+--  Description    : <SHORT DESCRIPTION>
+--
+--  Created Date   : <YYYY-MM-DD>
+--  Modified Date  : 2025-12-19
+--  Checksum       : 758c77a4f3021ee1712b60a8da90496c40cffc595eb864af723ad33acf6f793f
+--
+--  Author         : <AUTHOR>
+--  Company        : <COMPANY>
+--
+--  Notes:
+--    - Created Date is set once at file creation.
+--    - Modified Date and Checksum are maintained automatically
+--      via Git pre-commit hooks.
+--    - Checksum excludes this header block.
+-- ============================================================================
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
